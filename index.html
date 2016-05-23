@@ -4,8 +4,55 @@
         <title>Home assigment 3</title>
         <link rel="icon" href="favicon.ico" type="image/x-icon">
         <meta charset="UTF-8">
+        <style>
+        table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        }
+        th, td {
+        padding: 15px;
+        text-align: center; 
+        }
+</style>
     </head>
     <body>
+        <h1>Tables</h1>
+        <table>
+        <tr>
+            <th>№</th>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+            <th>Column 4</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td colspan="2" style="background-color:red">1.1 + 1.2</td>
+            <td>1.3</td>
+            <td>1.4</td>
+        </tr> 
+        <tr>
+            <td>2</td>
+            <td>2.1</td>
+            <td>2.2</td>
+            <td>2.3</td>
+            <td>2.4</td>
+        </tr> 
+        <tr>
+            <td>3</td>
+            <td>3.1</td>
+            <td rowspan="2"  style="background-color:green">3.2 + 4.2</td>
+            <td>3.3</td>
+            <td>3.4</td>
+        </tr> 
+        <tr>
+            <td>4</td>
+            <td>4.1</td>
+            <td>4.3</td>
+            <td>4.4</td>
+        </tr> 
+        </table>
+        <hr>
         <h1>Forms & Input</h1>
         <form method="POST" action="https://formspree.io/olekbut@gmail.com">
             <fieldset>
@@ -16,7 +63,7 @@
                 <label for="email">E-mail:</label>
                 <input type="email" name="email" id="email" placeholder="example: ob@gmail.com" required/><br><br>
                 <label for="passport">Passport:</label>
-                <input type="text" id="passport" name="passport" required pattern="[A-Z]{2}[0-9]{6}"/><br><br>
+                <input type="text" id="passport" placeholder="example: AA123456" name="passport" required pattern="[A-Z]{2}[0-9]{6}" title="Please follow the mask - [A-Z]{2}[0-9]{6}"/><br><br>
                 <input type="submit">
             </fieldset>        
         </form>
